@@ -273,7 +273,7 @@ public class AntiBuildEventHandler implements Listener {
     }
 
     /**
-     * Checks if a player has permission to open/accesss chests.
+     * Checks if a player has permission to open/access chests.
      *
      * @param event
      */
@@ -295,7 +295,7 @@ public class AntiBuildEventHandler implements Listener {
                 // World lock check
                 if (!event.isCancelled() && plugin.isUsingLock()) {
                     if (plugin.isLockedWorld(player.getWorld().getName())
-                            && !player.hasPermission("antibuild.lock.chest") && !player.hasPermission("antibuild" +
+                            && !player.hasPermission("antibuild.lock.interact") && !player.hasPermission("antibuild" +
                             ".lock.bypass") && !player.hasPermission("antibuild" +
                             ".lock.bypass." + player.getWorld().getName())) {
                         event.setCancelled(true);
